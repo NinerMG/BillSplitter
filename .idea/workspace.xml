@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="236dad4b-e7e2-48ee-8e29-3ec5a7bb0288" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/BillSplitter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BillSplitter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="236dad4b-e7e2-48ee-8e29-3ec5a7bb0288" name="Changes" comment="step first - list of friends to dictioary">
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +88,19 @@
       <option name="presentableId" value="Default" />
       <updated>1742850177020</updated>
     </task>
+    <task id="LOCAL-00001" summary="step first - list of friends to dictioary">
+      <option name="closed" value="true" />
+      <created>1742850925288</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1742850925288</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="step first - list of friends to dictioary" />
+    <option name="LAST_COMMIT_MESSAGE" value="step first - list of friends to dictioary" />
   </component>
 </project>

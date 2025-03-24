@@ -10,8 +10,13 @@ def friends_dict():
             name = input()
             friends_list.append(name)
 
-        names_dict = {n : 0 for n in friends_list}
+        amount_to_pay = int(input("Enter the total bill value:"))
+        per_person = round(amount_to_pay / friends_numbers, 2)
+        per_person = int(per_person) if per_person.is_integer() else per_person
+
+        names_dict = {n : per_person for n in friends_list}
         print(names_dict)
+
 
 if __name__ == '__main__':
     friends_dict()
