@@ -1,7 +1,31 @@
+import random
+
 def friends_dict():
+    friends_list, friends_count = get_friends_list()
+    if not friends_list:
+        return
+    amount_to_pay = get_bill_amount()
+    per_person = split_bill(amount_to_pay, friends_count)
+    lucky = lucky_friend(friends_list)
+
+    names_dict = create_friends_dict(friends_list, per_person)
+    print(names_dict)
+
+def lucky_friend(friends_list):
+    choice = input('Do you want to use the "Who is lucky?" feature? Write Yes/No:').lower()
+    if choice == "yes":
+        lucky = random.choice(friends_list)
+        print(f"{lucky} is the lucky one!")
+        return lucky
+    else:
+        print("No one is going to be lucky")
+        return None
+
+def get_friends_list():
     friends_numbers = int(input("Enter the number of friends joining (including you):"))
     if friends_numbers < 1:
         print("No one is joining for the party")
+        return [],0
     else:
         friends_list = []
         print("Enter the name of every friend (including you), each on a new line:")
@@ -10,13 +34,17 @@ def friends_dict():
             name = input()
             friends_list.append(name)
 
-        amount_to_pay = int(input("Enter the total bill value:"))
-        per_person = round(amount_to_pay / friends_numbers, 2)
-        per_person = int(per_person) if per_person.is_integer() else per_person
+    return friends_list, friends_numbers
 
-        names_dict = {n : per_person for n in friends_list}
-        print(names_dict)
+def get_bill_amount():
+    return int(input("Enter the total bill value:"))
 
+def split_bill(amount, friends_count):
+    per_person = round(amount / friends_count, 2)
+    return int(per_person) if per_person.is_integer() else per_person
+
+def create_friends_dict(friends_list, per_person):
+    return {name: per_person for name in friends_list}
 
 if __name__ == '__main__':
     friends_dict()
