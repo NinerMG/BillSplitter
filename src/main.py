@@ -6,9 +6,11 @@ def friends_dict():
         return
     amount_to_pay = get_bill_amount()
     per_person = split_bill(amount_to_pay, friends_count)
-    lucky = lucky_friend(friends_list)
 
+    lucky = lucky_friend(friends_list)
+    per_person = split_bill(amount_to_pay, friends_count - 1)
     names_dict = create_friends_dict(friends_list, per_person)
+    names_dict = lucky_bonus(names_dict, lucky)
     print(names_dict)
 
 def lucky_friend(friends_list):
@@ -44,7 +46,12 @@ def split_bill(amount, friends_count):
     return int(per_person) if per_person.is_integer() else per_person
 
 def create_friends_dict(friends_list, per_person):
-    return {name: per_person for name in friends_list}
+    return {name : per_person for name in friends_list}
+
+def lucky_bonus(friends_list, lucky_person):
+    if lucky_person:
+        friends_list[lucky_person] = 0
+    return friends_list
 
 if __name__ == '__main__':
     friends_dict()
